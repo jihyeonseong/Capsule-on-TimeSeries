@@ -1,0 +1,33 @@
+#basic setting for run#
+gpu: 2
+exp_name: 'DR' # "{model name}_{task}_{data}
+task: 'classirecon' # 'classification' / 'reconstruction'/ 'prediction' (for CNN and DR both) / 'classirecon' (for DR)
+model: 'DR' # 'CNN' / 'DR'
+data: 'ECG' # 'ECG' / 'traffic'
+
+#model setting#
+num_epoch: 0
+lr: 1e-4 # Please Fix (1e-4 = best lr)
+num_class: 5 # ECG = 5 / traffic = 7
+out_shape: 187 # ECG-classification = 5 / ECG-reconstruction, classirecon = 187 / traffic-Prediction = 862
+in_shape: 1 #ECG - 1 / traffic - 862
+
+#more pred setting#
+window: 187 # ECG - 187 / traffic - 168
+pred_step: 24
+
+#choose loss#
+loss: 'margin' # 'ce' /  DR-Classification, Reconstruction - 'margin' / Prediction - 'mse'
+
+#first conv layer kernel length setting#
+kernel_size: 1 # or 3, 5, 7, 9, 11
+
+#DR CapsNet setting#
+routing: "yes" # 'yes' / 'no'
+num_routing: 3 # 1<=x
+
+affine: "param" # 'param' / 'shared' / 'constant'
+
+squashfn: "sigmoid" # 'squash' / 'sigmoid' / 'norm'
+
+reconLoss: "soft" # 'class' / 'soft' / 'no'
