@@ -1,3 +1,4 @@
 # TSCapsuleNet: Dynamic-Routing Capsule Network on TimeSeries
 
-I will update README soon...
+## Pkgs
+``pip install umap-learn''
