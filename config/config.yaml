@@ -1,5 +1,5 @@
 #basic setting for run#
-gpu: 2
+gpu: 0
 exp_name: 'DR' # "{model name}_{task}_{data}
 task: 'classirecon' # 'classification' / 'reconstruction'/ 'prediction' (for CNN and DR both) / 'classirecon' (for DR)
 model: 'DR' # 'CNN' / 'DR'
